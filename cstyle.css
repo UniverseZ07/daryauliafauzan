@@ -242,3 +242,26 @@ p {
     display: block;
     animation: fadeIn 0.3s ease;
 }
+
+.flower {
+    position: absolute; /* Gunakan posisi absolut agar mengikuti posisi di halaman */
+    pointer-events: none; /* Tidak mengganggu interaksi mouse */
+    width: 30px;
+    height: 30px;
+    background-image: url('miku.png'); /* Gambar anime */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: float 1.5s ease-out forwards;
+    z-index: 9999;
+}
+
+@keyframes float {
+    0% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.5) translateY(-50px);
+        opacity: 0;
+    }
+}
