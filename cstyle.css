@@ -1,0 +1,267 @@
+/* Mengatur body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1d1e22, #3a3b3e);
+    color: #fff;
+    min-height: 100vh; /* Menggunakan min-height agar konten bisa melebihi layar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+/* Garis tebal di latar belakang */
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px), 
+        linear-gradient(180deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px; /* Ukuran jarak antar garis */
+    z-index: 1;
+    opacity: 0.2; /* Transparansi garis */
+}
+
+/* Pola simbol-simbol */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#555 1px, transparent 1px);
+    background-size: 20px 20px; /* Ukuran pola */
+    opacity: 0.3; /* Transparansi pola */
+    z-index: 2;
+}
+
+/* Konten utama */
+.content {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1); /* Latar transparan gelap */
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    position: relative;
+    font-family: 'Poppins', sans-serif; /* Font baru untuk header */
+}
+
+/* Heading */
+h1 {
+    font-size: 3em;
+    color: #fff;
+    margin: 10px 0;
+    letter-spacing: 2px; /* Spasi antar huruf lebih lebar */
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Efek bayangan */
+}
+
+/* Responsif pada layar kecil */
+@media (max-width: 768px) {
+    .btn-certification {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animasi teks muncul */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Terapkan animasi ke teks */
+.text-container .text, h1, h2,
+.social-icon, .social-iconmail,
+.photo, .btn-certification, 
+p {
+    opacity: 0; /* Awalnya tidak terlihat */
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Urutan animasi */
+.text-container .text {
+    animation-delay: 0s; /* Muncul pertama setelah 0.5 detik */
+}
+
+h1 {
+    animation-delay: 0.3s;
+}
+
+h2 {
+    animation-delay: 0.5s; /* Muncul setelah 1 detik */
+}
+
+.photo {
+    animation-delay: 0.7s; /* Muncul setelah 1.5 detik */
+}
+
+p {
+    animation-delay: 0.9s; /* Muncul terakhir setelah 2 detik */
+}
+
+.social-icon {
+    animation-delay: 1.2s;
+}
+.social-iconmail {
+    animation-delay: 1.2s;
+}
+
+.btn-certification {
+    animation-delay: 1.5s;
+}
+
+/* Partikel dekoratif */
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: move 8s linear infinite;
+}
+
+/* Posisi awal partikel */
+.particle:nth-child(1) {
+    left: 5%;
+    top: 10%;
+    animation-delay: 0s;
+}
+.particle:nth-child(2) {
+    left: 95%;
+    top: 30%;
+    animation-delay: 2s;
+}
+.particle:nth-child(3) {
+    left: 5%;
+    top: 50%;
+    animation-delay: 4s;
+}
+.particle:nth-child(4) {
+    left: 95%;
+    top: 70%;
+    animation-delay: 6s;
+}
+
+/* Animasi partikel */
+@keyframes move {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Tombol Hamburger */
+.hamburger {
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 2px;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Opsi Dropdown */
+.menu-items {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.menu-items a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.menu-items a:hover {
+    color: #f0a500;
+}
+
+/* Animasi Hamburger Menu */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Menu Dropdown Tampil */
+.menu-items.show {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.flower {
+    position: absolute; /* Gunakan posisi absolut agar mengikuti posisi di halaman */
+    pointer-events: none; /* Tidak mengganggu interaksi mouse */
+    width: 30px;
+    height: 30px;
+    background-image: url('miku.png'); /* Gambar anime */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: float 1.5s ease-out forwards;
+    z-index: 9999;
+}
+
+@keyframes float {
+    0% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.5) translateY(-50px);
+        opacity: 0;
+    }
+}
