@@ -265,3 +265,25 @@ p {
         opacity: 0;
     }
 }
+
+/* Media Queries untuk perangkat seluler */
+@media (max-width: 768px) {
+    .content {
+        padding: 10px 20px;
+    }
+    .resume-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .resume-block {
+        margin-bottom: 20px;
+    }
+    .menu-items {
+        width: 100%;
+        text-align: center;
+    }
+    .menu-items a {
+        display: block;
+        margin: 5px 0;
+    }
+}
