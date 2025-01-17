@@ -1,93 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dary Aulia Fauzan</title>
-        <!-- Menambahkan link Google Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap">
-        <!-- Menambahkan link ke Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="stylesheet" href="style.css">
-        
-    </head>
-    <body>
-        <script src="script2.js"></script>
-        <script src="script.js"></script>
-        <!-- Hamburger Menu -->
-        <div class="hamburger-menu">
-            <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dary Aulia Fauzan</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu-items" id="menuItems">
+            <a href="index.html">Home</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+            <a href="certification.html">Certification</a>
+        </div>
+    </div>
+
+    <!-- Background Particles -->
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>HELLO, I'M</h1>
+        <h2>DARY AULIA FAUZAN</h2>
+        <img src="fotoptof.jpg" alt="My Photo" class="photo">
+
+        <h2>About Me</h2>
+        <p>Since getting to know computers at the age of 12, I spent all day in front of the computer playing games. From there, I became interested in how computer components work. During vocational education, I majored in Computer Network Technology and learned how networks on computers work, configure networks, troubleshoot, and manage them.</p>
+
+        <!-- Certification Button -->
+        <a href="certification.html" class="btn-certification">CERTIFICATION</a>
+
+        <!-- Resume Section -->
+        <h2>Resume</h2>
+        <p>Experience is essential for developing skills and adapting to various situations.</p>
+
+        <div class="resume-content">
+            <div class="resume-block">
+                <h3>2020-2023</h3>
+                <p><strong>Vocational School Graduated in Computer Network Engineering</strong></p>
+                <p>SMK NEGERI 2 KOTA PROBOLINGGO</p>
+                <p>Learned how computer networks work, configure networks, troubleshoot, and manage them.</p>
             </div>
-            <div class="menu-items" id="menuItems">
-                <a href="index.html">Home</a>
-                <a href="#experience">Experience</a>
-                <a href="#contact">Contact</a>
-                <a href="certification.html">Certification</a>
+            <div class="resume-block">
+                <h3>2024-Present</h3>
+                <p><strong>Internet Engineering Technology</strong></p>
+                <p>POLITEKNIK ELEKTRONIKA NEGERI SURABAYA</p>
+                <p>Advanced level of networking with a focus on IoT (Internet of Things), including connecting microcontrollers like ESP32 and Arduino to the internet.</p>
             </div>
         </div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="content">
-                <h1>HELLO, I'M</h1>
-                <h2 style="color: aliceblue;">DARY AULIA FAUZAN</h2>
-                <img src="fotoptof.jpg" alt="My Photo" class="photo">
-                <h2 style="text-align: left;"><strong>About me</strong></h2>
-                <p>Since getting to know computers at the age of 12, I spent all day in front of the computer playing games and from there I became interested in how the components on a computer work so that I knew what components were used to make my computer function. However, when I started entering vocational education, I majored in Computer Network Technology and at that time I learned many things and not only studied computers, but I was also taught how networks on computers work so that 2 or more computers can communicate with each other.</p>
-                
-                    <!-- Tombol Certification -->
-                <a href="certification.html" class="btn-certification">CERTIFICATION</a><p>
-                
-                <p><h2>Resume</h2></p>
-                <p style="text-align: center;">Experience is very important in developing skills so that we can adapt to any situation.</p>
 
-                <!-- Blok Teks Kiri dan Kanan -->
-                <div class="resume-content">
-                    <!-- Blok Kiri -->
-                    <div class="resume-block">
-                        <h3 style="color: yellowgreen;"><strong>2020-2023</strong></h3>
-                        <p style="color: black;"><strong>Vocational School Graduated in Computer Network Engineering</strong></p>
-                        <p>SMK NEGERI 2 KOTA PROBOLINGGO</p>
-                        <p>Computer Network Engineering teaches how computer networks work, configuring networks, troubleshooting, and managing networks.</p>
-                    </div>
+        <!-- CV Button -->
+        <a href="Dary Aulia Fauzan.pdf" class="btn-cv">DOWNLOAD CV</a>
 
-                    <!-- Blok Kanan -->
-                    <div class="resume-block">
-                        <h3 style="color: yellowgreen;"><strong>2024-Present</strong></h3>
-                        <p style="color: black;">Internet Engineering Technology</p>
-                        <p>POLITEKNIK ELEKTRONIKA NEGERI SURABAYA</p>
-                        <p>advanced level of networking, not only studying computer networks but also focusing on IoT (Internet of Things), connecting microcontrollers such as ESP32, Arduino to the internet so that they can be accessed globally.</p>
-                    </div>
-                </div>
-
-                <a href="Dary Aulia Fauzan.pdf" class="btn-cv">DOWNLOAD CV</a>
-
-                <p><h2>Social Media</h2></p>
-                <!-- Ikon Sosial Media -->
-                <div class="social-media">
-                    <a href="https://www.instagram.com/aaaaaarrrrriiiii/" target="_blank" class="social-icon">
-                        <img src="instagram.png" alt="Instagram"><p>Instagram</p>
-                    </a>
-                    <a href="https://github.com/UniverseZ07" target="_blank" class="social-icon">
-                        <img src="github-logo.png" alt="GitHub"><p>GitHub</p>
-                    </a>
-                    <a href="mailto:daryauliafauzan08@gmail.com" class="social-iconmail">
-                        <img src="mail.png" alt="Mail"><p>Email</p>
-                    <a href="https://open.spotify.com/user/31s3gn6k2u6iwhjwgpyax6y6nbey?si=d9023512211d4f7d" target="_blank" class="social-icon">
-                        <img src="spotify.png" alt="Spotify"><p>Spotify</p>
-                    <a href="https://wa.me/6289670007604" target="_blank" class="social-icon">
-                        <img src="whatsapp.png" alt="Whatsapp"><p>Whatsapp</p>
-                    <a href="https://discordapp.com/users/.kehidupan" target="_blank" class="social-icon">
-                        <img src="discord.png" alt="Discord"><p>Discord</p>
-                    <a href="https://t.me/6289670007604" class="social-icon">
-                        <img src="Telegram.png" alt="Telegram"><p>Telegram</p>
-                    </a>
-                </div>
-            </div>
+        <!-- Social Media Section -->
+        <h2>Social Media</h2>
+        <div class="social-media">
+            <a href="https://www.instagram.com/aaaaaarrrrriiiii/" target="_blank" class="social-icon">
+                <img src="instagram.png" alt="Instagram"><p>Instagram</p>
+            </a>
+            <a href="https://github.com/UniverseZ07" target="_blank" class="social-icon">
+                <img src="github-logo.png" alt="GitHub"><p>GitHub</p>
+            </a>
+            <a href="mailto:daryauliafauzan08@gmail.com" class="social-iconmail">
+                <img src="mail.png" alt="Mail"><p>Email</p>
+            </a>
+            <a href="https://open.spotify.com/user/31s3gn6k2u6iwhjwgpyax6y6nbey?si=d9023512211d4f7d" target="_blank" class="social-icon">
+                <img src="spotify.png" alt="Spotify"><p>Spotify</p>
+            </a>
+            <a href="https://wa.me/6289670007604" target="_blank" class="social-icon">
+                <img src="whatsapp.png" alt="Whatsapp"><p>Whatsapp</p>
+            </a>
+            <a href="https://discordapp.com/users/.kehidupan" target="_blank" class="social-icon">
+                <img src="discord.png" alt="Discord"><p>Discord</p>
+            </a>
+            <a href="https://t.me/6289670007604" target="_blank" class="social-icon">
+                <img src="telegram.png" alt="Telegram"><p>Telegram</p>
+            </a>
         </div>
-    </body>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="script2.js"></script>
+    <script src="script.js"></script>
 </body>
+</html>
